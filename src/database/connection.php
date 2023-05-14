@@ -10,3 +10,6 @@ if (!$connection) {
     exit;
 }
 
+if (!mysqli_select_db($connection, $DB_NAME)) {
+    # Configurazione manuale database
+}

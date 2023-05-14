@@ -16,7 +16,7 @@ $HEAD_COMPONENT = $COMPONENT_DIR + '/head.php';
 $LOGIN_FORM_COMPONENT = $COMPONENT_DIR + '/form/login_form.php';
 $SIGNIN_FORM_COMPONENT = $COMPONENT_DIR + '/form/signin_form.php';
 
-$UTILITY = $SRC + '/utility.php';
+$UTILITY = $SRC_URL + '/utility.php';
 
 $SERVER_NAME = 'database';
 $HOST_NAME = 'root';
@@ -25,12 +25,12 @@ $DB_NAME = ''; # Imposta database name
 
 # Pages
 $HOME = array(
-    'href' => $SRC . 'index.php',
+    'href' => $SRC_URL . '/index.php',
     'name' => 'Home'
 );
 
 $LOGIN = array(
-    'href' => $PAGE_DIR . 'login.php',
+    'href' => $SRC_URL . '/login.php',
     'name' => 'Login'
 );
 
