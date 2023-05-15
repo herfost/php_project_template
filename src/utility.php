@@ -11,11 +11,14 @@
 function mysqli_query_trace($connection, $query, string|bool $error_message = false): bool|mysqli_result
 {
     $result = mysqli_query($connection, $query);
+    
     if (!$result) {
         if ($error_message !== false) echo $error_message . PHP_EOL;
+        echo mysqli_error($connection);
         echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
         echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
     }
 
     return $result;
 }
+
