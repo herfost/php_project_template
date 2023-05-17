@@ -63,8 +63,6 @@
             const h = document.getElementById("h-" + _sectionId);
             const p = document.getElementById("p-" + _sectionId);
 
-            console.log(p);
-
             const data = { id: _sectionId, language: _language };
             const url = 'http://localhost/percorso-interdisciplinare-refactor/src/action.php';
 
@@ -78,8 +76,8 @@
 
             fetch(url, init).then((response) => response.json())
                 .then(json => {
-                    h.innerHTML = json[1];
-                    p.innerHTML = json[2];
+                    h.innerHTML = json.heading;
+                    p.innerHTML = json.paragraph;
                 }).catch(error => console.log(error));
         });
     }
